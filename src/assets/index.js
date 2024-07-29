@@ -2,6 +2,8 @@ import project1 from "./project-1.jpg";
 import project2 from "./project-2.jpg";
 import project3 from "./project-3.jpg";
 import project4 from "./project-4.jpg";
+import food from './food del.jpeg'
+import portfolio from './portfolio.jpg'
 
 export const HERO_CONTENT = `At 19, I'm all about tech – it's my playground and my passion. I'm a natural learner, so diving into new coding languages is like cracking open a good mystery novel. Web development was my first conquest, and I've built some projects I'm pretty proud of.Now, I'm obsessed with Android development. The challenge of crafting intuitive apps for people to use every day is super exciting, and my learning curve is practically vertical. Give me a coding problem, and I'll be itching to solve it with an innovative approach!`;
 
@@ -18,63 +20,53 @@ Beyond software development, I find enjoyment in playing sports. This not only r
 
 export const EXPERIENCES = [
   {
-    year: "2023 - Present",
-    role: "Senior Full Stack Developer",
-    company: "Google Inc.",
-    description: `Led a team in developing and maintaining web applications using JavaScript, React.js, and Node.js. Implemented RESTful APIs and integrated with MongoDB databases. Collaborated with stakeholders to define project requirements and timelines.`,
-    technologies: ["Javascript", "React.js", "Next.js", "mongoDB"],
+    year: "2023",
+    role: "IIT BOMBAY HACK AI FINALIST",
+    description: `Led a team in developing a AI agent that can manage and optimze personal schedules. The agent can intelligently handle appointments and set reminders based on users past preferences.`,
+    technologies: ["Javascript", "React.js", "NLP", "mongoDB"],
   },
   {
-    year: "2022 - 2023",
-    role: "Frontend Developer",
-    company: "Adobe",
-    description: `Designed and developed user interfaces for web applications using Next.js and React. Worked closely with backend developers to integrate frontend components with Node.js APIs. Implemented responsive designs and optimized frontend performance.`,
-    technologies: ["HTML", "CSS", "Vue.js", "mySQL"],
+    year: "2023",
+    role: "Winner in Prototest Hackathon [KDKCOE Nagpur]",
+    description: `Led a team in developing an app called "Road Buddy," designed to address the daily challenges people face while traveling. Road Buddy is a vehicle towing app that enables users to share and request rides easily, making their journeys more convenient and stress-free.`,
+    technologies: ["Kotlin", "Firebase", "Google Maps API"],
   },
   {
-    year: "2021 - 2022",
-    role: "Full Stack Developer",
-    company: "Facebook",
-    description: `Developed and maintained web applications using JavaScript, React.js, and Node.js. Designed and implemented RESTful APIs for data communication. Collaborated with cross-functional teams to deliver high-quality software products on schedule.`,
-    technologies: ["Python", "Svelte", "Three.js", "Postgres"],
-  },
-  {
-    year: "2020 - 2021",
-    role: "Software Engineer",
-    company: "Paypal",
-    description: `Contributed to the development of web applications using JavaScript, React.js, and Node.js. Managed databases and implemented data storage solutions using MongoDB. Worked closely with product managers to prioritize features and enhancements.`,
-    technologies: ["Ruby", "Rails", "PHP", "Sqlite"],
+    year: "2023",
+    role: "Got appreciated in New India Vibrant Hackathon",
+    description: `I led a team in developing a cross-platform mobile application focused on ensuring public safety. This app allows users to discreetly record videos of any suspicious or mischievous behavior happening nearby. In case of an emergency, these videos can be sent directly to police headquarters without revealing the user's identity, ensuring both safety and anonymity.`,
+    technologies: ["Flutter", "Firebase", "Google Maps API"],
   },
 ];
 
 export const PROJECTS = [
   {
-    title: "E-Commerce Website",
-    image: project1,
+    title: "Food Delivery Website",
+    image: food,
     description:
-      "A fully functional e-commerce website with features like product listing, shopping cart, and user authentication.",
-    technologies: ["HTML", "CSS", "React", "Node.js", "MongoDB"],
+      "A fully functional food delivery website with features like selectiong product, food cart, and user authentication, online payment.",
+    technologies: ["React.js", "Express.js", "Node.js", "MongoDB"],
   },
   {
-    title: "Task Management App",
+    title: "Trading Automation Platform",
+    image: project4,
+    description:
+      "A platform that simplify the process of buying or selling stocks by enabling users to execute trades across all linked accounts simultaneously with just one click",
+    technologies: ["React.js", "Flask", "MongoDB", "Auth0"],
+  },
+  {
+    title: "Easy Notes App",
     image: project2,
     description:
-      "An application for managing tasks and projects, with features such as task creation, assignment, and progress tracking.",
-    technologies: ["HTML", "CSS", "Angular", "Firebase"],
+      "An application for managing semester Notes with ease, with features such as viewing the pdf's, assignment's, and also uploading it.",
+    technologies: ["Kotlin", "XML", "Firebase"],
   },
   {
     title: "Portfolio Website",
-    image: project3,
+    image: portfolio,
     description:
       "A personal portfolio website showcasing projects, skills, and contact information.",
-    technologies: ["HTML", "CSS", "React", "Bootstrap"],
-  },
-  {
-    title: "Blogging Platform",
-    image: project4,
-    description:
-      "A platform for creating and publishing blog posts, with features like rich text editing, commenting, and user profiles.",
-    technologies: ["HTML", "CSS", "Vue.js", "Express", "mySQL"],
+    technologies: ["React.js", "Tailwind CSS"],
   },
 ];
 

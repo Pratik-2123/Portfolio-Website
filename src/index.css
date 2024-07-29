@@ -4,6 +4,11 @@
 @tailwind components;
 @tailwind utilities;
 
+.active {
+    color: #c084fc; /* Customize the active color */
+  }
+  
+
 :root{
     font-family: "Inter", sans-serif;
 }
