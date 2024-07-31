@@ -1,7 +1,8 @@
-import React from 'react'
+import React, { useState, useEffect } from 'react'
 import { HERO_CONTENT } from "../assets/index.js"
 import profilePic from "../assets/avatar.png"
 import { motion } from 'framer-motion'
+import pdf from '../assets/Pratik_Patel_Resume.pdf'
 
 const container = (delay) => ({
   hidden: { x: -100, opacity: 0 },
@@ -9,6 +10,37 @@ const container = (delay) => ({
 })
 
 const Hero = () => {
+
+  const words = ["Full Stack Developer", "Android App Developer", "Software Engineer"];
+  const [currentWordIndex, setCurrentWordIndex] = useState(0);
+  const [currentText, setCurrentText] = useState("");
+  const [isDeleting, setIsDeleting] = useState(false);
+  const [letterIndex, setLetterIndex] = useState(0);
+
+  useEffect(() => {
+    const handleType = () => {
+      const currentWord = words[currentWordIndex];
+      if (isDeleting) {
+        setCurrentText(currentWord.substring(0, letterIndex - 1));
+        setLetterIndex(letterIndex - 1);
+        if (letterIndex === 0) {
+          setIsDeleting(false);
+          setCurrentWordIndex((currentWordIndex + 1) % words.length);
+        }
+      } else {
+        setCurrentText(currentWord.substring(0, letterIndex + 1));
+        setLetterIndex(letterIndex + 1);
+        if (letterIndex === currentWord.length) {
+          setIsDeleting(true);
+        }
+      }
+    };
+
+    const typingDelay = setTimeout(handleType, 100);
+
+    return () => clearTimeout(typingDelay);
+  }, [currentText, isDeleting, letterIndex, words, currentWordIndex]);
+
   return (
     <div id='home' className='pt-28 px-8 border-b border-neutral-900 pb-4 lg:mb-36 w-full h-auto lg:h-[100vh]'>
       <div className='flex flex-wrap'>
@@ -26,7 +58,7 @@ const Hero = () => {
               initial="hidden"
               animate="visible"
               className='bg-gradient-to-r from-pink-300 via-slate-500 to-purple-500 bg-clip-text text-2xl lg:text-4xl tracking-tight text-transparent'>
-              Full Stack Developer
+              {currentText} |
             </motion.span>
             <motion.p
               variants={container(1)}
@@ -35,6 +67,32 @@ const Hero = () => {
               className='my-2 max-w-xl py-4 lg:py-6 font-light tracking-tighter'>
               {HERO_CONTENT}
             </motion.p>
+
+            <a href={pdf} download="Pratik_Resume">
+              <motion.button
+                whileInView={{ opacity: 1}}
+                initial={{ opacity: 0}}
+                transition={{ duration: 1.5, delay: 1.4 }}
+                className="flex items-center h-14 gap-3 bg-purple-500 px-4 py-2 rounded-md text-white tracking-wider shadow-xl transition duration-300 hover:bg-slate-600"
+              >
+                <span>Download Resume</span>
+                <svg
+                  className="w-4 h-4 animate-bounce hover:animate-none"
+                  stroke="currentColor"
+                  strokeWidth="2"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    d="M19.5 13.5L12 21m0 0L4.5 13.5M12 21V3"
+                    strokeLinejoin="round"
+                    strokeLinecap="round"
+                  />
+                </svg>
+              </motion.button>
+            </a>
+
           </div>
         </div>
         <div className='w-full lg:w-1/2 lg:p-8'>
