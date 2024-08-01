@@ -37,14 +37,14 @@ const Contact = () => {
                     <motion.h2
                         whileInView={{ opacity: 1, y: 0 }}
                         initial={{ opacity: 0, y: -100 }}
-                        transition={{ duration: 1.5, delay: 0.2 }}
+                        transition={{ duration: 1.5 }}
                         className="mb-4 text-4xl tracking-tight font-bold text-center text-gray-900 dark:text-white">
                         Contact Us
                     </motion.h2>
                     <motion.p
                         whileInView={{ opacity: 1, y: 0 }}
                         initial={{ opacity: 0, y: -100 }}
-                        transition={{ duration: 1.5, delay: 0.2 }}
+                        transition={{ duration: 1.5 }}
                         className="mb-8 lg:mb-16 font-light text-center text-gray-500 dark:text-gray-400 sm:text-xl">
                         Got any issue related to it? Want to send feedback about our service? Need details about our the service provided? <br /> Let us know.
                     </motion.p>
@@ -60,7 +60,7 @@ const Contact = () => {
                         <motion.div
                             whileInView={{ opacity: 1, x: 0 }}
                             initial={{ opacity: 0, x: 100 }}
-                            transition={{ duration: 1, delay: 0.4 }}
+                            transition={{ duration: 1, delay: 0.2 }}
                         >
                             <label for="phone" className="block mb-2 text-sm font-medium text-gray-900 dark:text-gray-300">Phone</label>
                             <input type="tel" name="phone" id="phone" className="block p-3 w-full text-sm text-gray-900 bg-gray-50 rounded-lg border border-gray-300 shadow-sm focus:ring-primary-500 focus:border-primary-500 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-primary-500 dark:focus:border-primary-500 dark:shadow-sm-light" placeholder="78456XXXXX" pattern="[0-9]{10}" required />
@@ -69,7 +69,7 @@ const Contact = () => {
                         <motion.div
                             whileInView={{ opacity: 1, x: 0 }}
                             initial={{ opacity: 0, x: -100 }}
-                            transition={{ duration: 1, delay: 0.8 }}
+                            transition={{ duration: 1, delay: 0.4 }}
                             className="sm:col-span-2">
                             <label for="message" className="block mb-2 text-sm font-medium text-gray-900 dark:text-gray-400">Your message</label>
                             <textarea id="message" name='message' rows="6" className="block p-2.5 w-full text-sm text-gray-900 bg-gray-50 rounded-lg shadow-sm border border-gray-300 focus:ring-primary-500 focus:border-primary-500 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-primary-500 dark:focus:border-primary-500" placeholder="Leave a comment..."></textarea>
@@ -77,7 +77,7 @@ const Contact = () => {
                         <motion.button
                             whileInView={{ opacity: 1}}
                             initial={{ opacity: 0}}
-                            transition={{ duration: 1.5, delay: 1.2 }}
+                            transition={{ duration: 1.5, delay: 0.8}}
                             className="inline-block py-2 px-6 rounded-l-xl rounded-t-xl bg-[#7747FF] hover:bg-white hover:text-[#7747FF] focus:text-[#7747FF] focus:bg-gray-200 text-gray-50 font-bold leading-loose transition duration-200"
                             type='submit'
                         >
